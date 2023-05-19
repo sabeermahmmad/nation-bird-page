@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 1</title>
     <style>
+
+         * {
+            padding: 0;  border: 0; box-sizing: border-box;
+         }
         .big-container {
             display: flex;
             background-color: springgreen;
@@ -44,8 +48,65 @@
             padding: 20px;
             border-radius: 5%;
             border: 2px solid red;
-
+            
         }
+        .boxing-box {
+            display: flex;
+            
+        }
+
+        .rotate-box {
+            /* border-radius: 43% 57% 100% 0% / 66% 48% 52% 34% ; */
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+            /* background-color: tomato; */
+        }
+
+        .triangle1 {
+            animation: rotateAnimation1st 5s infinite linear;
+        }
+
+        .triangle2 {
+            animation: rotateAnimation2nd 5s infinite linear;
+        }
+
+        .triangle3 {
+            animation: rotateAnimation3rd 5s infinite linear;
+        }
+
+
+
+
+    @keyframes rotateAnimation1st {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotateAnimation2nd {
+      from {
+        transform: rotate(360deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes rotateAnimation3rd {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
         ul {
             list-style-type: none;
             display: flex;
@@ -54,6 +115,10 @@
         ul li {
             margin-top: 30px;
             color: blue;
+        }
+        li:hover{
+            color: #ffffff;
+            background-color: yellowgreen;
         }
     </style>
 </head>
@@ -79,8 +144,15 @@
                 <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1527442336%3A1684431308211908&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=Af_xneEJD9bWos3zYFbyojROPtrz5ChARJhvIpyIhbppfZ5dhn8ZhFWS0qrcDd1f10SJBVqYtvTr&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><li>Login</li></a>
                 <a href="https://globaltree.in/warangal/" target="_self"><li>Tourist Contacts</li></a>
                 <a href="https://www.makemytrip.com/" target="_parent"><li>Book Your Trip</li></a>
-
+                <a href="https://www.holidify.com/country/india/places-to-visit.html" target="_blank"><li>Tourist Places</li></a>
+                <a href="https://traveltriangle.com/blog/7-wonders-of-the-world/" target="_blank"><li>World Wonders Places</li></a>
             </ul>
+            <div class="boxing-box">
+                <div class="rotate-box triangle1"></div>
+                <div class="rotate-box triangle2"></div>
+                <div class="rotate-box triangle3"></div>
+                
+            </div>
         </div>
     </div>
 </body>
